@@ -49,9 +49,12 @@ public class BootstrapData implements CommandLineRunner {
 
         ericSaved.getBooks().add(dddSaved);
         rodSaved.getBooks().add(noEJBSaved);
+        dddSaved.getAuthors().add(ericSaved);
+        noEJBSaved.getAuthors().add(rodSaved);
 
         // add publisher
         Publisher springer = new Publisher();
+        springer.setPublisherName("Springer");
         springer.setAddress("Heidelberger Pl. 3");
         springer.setCity("Berlin");
         springer.setState("Berlin");
